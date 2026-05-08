@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.southside.victoryss.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "InGameHudMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

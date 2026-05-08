@@ -1,0 +1,31 @@
+﻿{
+  "schemaVersion": 1,
+  "id": "victory-screenshot",
+  "version": "${version}",
+  "name": "Victory Screenshot",
+  "description": "Automatically take and copy screenshot on victory.",
+  "authors": [
+    "Southside"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/fabricmc/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/victory-screenshot/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.southside.victoryss.VictorySSMod"
+    ]
+  },
+  "mixins": [
+    "victory-screenshot.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
