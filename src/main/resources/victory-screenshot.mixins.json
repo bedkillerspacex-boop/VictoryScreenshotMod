@@ -3,6 +3,7 @@
   "package": "com.southside.victoryss.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ChatHudMixin",
     "InGameHudMixin"
   ],
   "client": [],

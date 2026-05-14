@@ -9,6 +9,7 @@ public class VictorySSMod implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            VictoryDetector.updateSession(client);
             if (client.world == null) {
                 victoryDetected = false;
                 return;
@@ -17,6 +18,7 @@ public class VictorySSMod implements ClientModInitializer {
             boolean isVictory = VictoryDetector.isVictory();
             if (isVictory && !victoryDetected) {
                 ScreenshotManager.takeVictoryScreenshot(client);
+                VictoryDetector.onVictoryScreenshotTaken();
                 victoryDetected = true;
             } else if (!isVictory) {
                 victoryDetected = false;

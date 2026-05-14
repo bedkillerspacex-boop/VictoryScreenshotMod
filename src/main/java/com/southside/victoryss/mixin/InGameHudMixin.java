@@ -11,14 +11,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
     @Inject(method = "setTitle", at = @At("HEAD"))
-    private void onSetTitle(Text title, CallbackInfo ci) {
+    private void victoryss$onSetTitle(Text title, CallbackInfo ci) {
         if (title != null && VictoryDetector.match(title.getString())) {
             VictoryDetector.triggerVictory();
         }
     }
 
     @Inject(method = "setOverlayMessage", at = @At("HEAD"))
-    private void onSetOverlayMessage(Text message, boolean tinted, CallbackInfo ci) {
+    private void victoryss$onSetOverlayMessage(Text message, boolean tinted, CallbackInfo ci) {
         if (message != null && VictoryDetector.match(message.getString())) {
             VictoryDetector.triggerVictory();
         }
